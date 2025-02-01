@@ -1,8 +1,34 @@
-# React + Vite
+# React Quest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To execute the project, simply run the following commands in the terminal:
 
-Currently, two official plugins are available:
+> - npm install
+> - npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Phase 1: React Basics
+
+   ✅ Set up environment
+
+   ✅ Core React concepts
+
+   ✅ Component Styling (Mobile-First Approach)
+
+2. Phase 2: API Integration & Advanced Concepts
+
+   ✅ Fetching data from an API
+
+   ✅ React Router (for navigation)
+
+   ✅ React Context & State Management
+
+3. Phase 3: Real Project – External API App
+
+   ✅ Plan UI with a mobile-first approach
+
+   ✅ Fetch data and display it with loading/error handling
+
+   ✅ Implement search/filter features
+
+   ✅ Add navigation (React Router)
+
+- By [felipepastana.com](https://laravel.felipepastana.com)
