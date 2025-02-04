@@ -4,8 +4,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
 function Navbar() {
-    const location = useLocation();
-
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -20,7 +18,7 @@ function Navbar() {
             <ul className={`${styles.menu} ${isOpen ? styles.open : styles.closed}`}>
                 <li>
                     <NavLink 
-                        className={location.pathname === '/' ? styles.active : styles.link} 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
                         to="/"
                     >
                         Home
@@ -28,7 +26,7 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink 
-                        className={location.pathname === '/counter' ? styles.active : styles.link} 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
                         to="/counter"
                     >
                         Counter Example
@@ -36,7 +34,7 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink 
-                        className={location.pathname === '/login' ? styles.active : styles.link} 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
                         to="/login"
                     >
                         Login Example
@@ -44,7 +42,7 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink 
-                        className={location.pathname === '/fetch-user' ? styles.active : styles.link} 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
                         to="/fetch-user"
                     >
                         API Fetching Example
