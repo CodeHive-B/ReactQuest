@@ -1,108 +1,89 @@
-/* Existing styles */
-
+/* 🔹 Navbar Container */
 nav {
-    background-color: #333;
-    padding: 10px 20px;
-  }
-  
-  ul {
-    list-style: none;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* 🔹 Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #f1c40f;
+}
+
+/* 🔹 Responsive for Mobile */
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    justify-content: space-around;
+    margin-left: auto;
+  }
+
+  .menu {
+    list-style: none;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
     padding: 0;
     margin: 0;
+    overflow: hidden; /* Ensures smooth animation */
+    height: 0; /* Hidden state */
+    background-color: #333;
+    transition: height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
   }
-  
+
   li {
-    display: inline;
+    margin: 10px 0;
+    width: 100%;
   }
-  
-  a {
-    text-decoration: none;
-    color: white;
+
+  /* 🔹 When menu opens */
+  .open {
+    height: 200px; /* Adjust this based on content */
+    opacity: 1;
+  }
+
+  /* 🔹 When menu closes */
+  .closed {
+    height: 0;
+    opacity: 0;
+  }
+
+  .active {
+    color: #ff8000;  /* Keep the color when the link is active */
     font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
   }
-  
-  a:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    width: 30px;
-    height: 20px;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
-  .hamburger div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  /* 🔹 Make Navbar Responsive */
-  @media (max-width: 768px) {
-    ul {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-  
-    li {
-      margin: 10px 0;
-    }
-  
-    .hamburger {
-      display: flex;
-      margin-left: auto;
-    }
-  
-    ul.mobile-menu {
-      display: flex; /* Show the menu when toggled */
-      flex-direction: column;
-      width: 100%;
-      padding: 10px;
-      background-color: #333;
-      animation: slideDown 1s ease-out forwards; /* Animation for opening the menu */
-    }
-  
-    li {
-      text-align: center;
-      width: 100%;
-    }
-
-    ul {
-        display: none;
-      }
-  }
-
-  /* 🔹 Add the slide-down effect for the menu */
-@keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* 🔹 Add the slide-up effect for the closing menu */
-  @keyframes slideUp {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-  }
+}
