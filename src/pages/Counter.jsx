@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../App.css'
 import Message from '../Message'
-import Greeting from '../Greeting'
-import Footer from '../Footer'
 
 function Counter() {
 
@@ -12,7 +9,7 @@ function Counter() {
   const decrement = () => setCountFelipe(count - 1);
 
   useEffect(() => {
-    document.title = `Count ${count}`
+    document.title = `Universal Count ${count}`
   }, [count])
 
   return (

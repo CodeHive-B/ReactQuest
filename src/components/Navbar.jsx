@@ -48,6 +48,22 @@ function Navbar() {
                         API Fetching Example
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
+                        to="/conditional_rendering"
+                    >
+                        Conditinal Rendering
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink 
+                        className={({ isActive }) => (isActive ? styles.active : styles.link)}
+                        to="/lists_keys"
+                    >
+                        Lists & Keys
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     )
